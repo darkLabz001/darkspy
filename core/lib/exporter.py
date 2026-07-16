@@ -30,7 +30,7 @@ class exporter:
         if output_dir:
             self.output_dir = output_dir
         else:
-            self.output_dir = os.path.expanduser("~/tools/Infoga/output")
+            self.output_dir = os.path.expanduser("~/tools/darkspy/output")
         os.makedirs(self.output_dir, exist_ok=True)
 
     def add_emails(self, emails):
@@ -53,7 +53,7 @@ class exporter:
 
     def export_json(self, filename=None):
         if not filename:
-            filename = "infoga_%s.json" % self.target.replace('.', '_')
+            filename = "darkspy_%s.json" % self.target.replace('.', '_')
         path = os.path.join(self.output_dir, filename)
         try:
             with open(path, 'w') as f:
@@ -66,7 +66,7 @@ class exporter:
 
     def export_csv(self, filename=None):
         if not filename:
-            filename = "infoga_%s.csv" % self.target.replace('.', '_')
+            filename = "darkspy_%s.csv" % self.target.replace('.', '_')
         path = os.path.join(self.output_dir, filename)
         try:
             with open(path, 'w', newline='') as f:

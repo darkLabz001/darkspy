@@ -34,8 +34,8 @@ class smtp_verify:
         try:
             server = smtplib.SMTP(timeout=10)
             server.connect(self.mx_host, 25)
-            server.helo("infoga.local")
-            server.mail("test@infoga.local")
+            server.helo("darkspy.local")
+            server.mail("test@darkspy.local")
             code, msg = server.rcpt(self.email)
             server.quit()
 
