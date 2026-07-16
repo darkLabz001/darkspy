@@ -49,45 +49,40 @@ class DarkSpy(object):
     def banner(self):
         c = self.color
         print("")
-        print(c.red(1)+"          /\\             /\\ "+c.reset())
-        print(c.red(1)+"         /  \\           /  \\"+c.reset())
-        print(c.red(1)+"        /    \\         /    \\"+c.reset())
-        print(c.red(1)+"       /      \\       /      \\"+c.reset())
-        print(c.red(1)+"      /        \\     /        \\"+c.reset())
-        print(c.red(1)+"     /          \\   /          \\"+c.reset())
-        print(c.red(1)+"    /            \\ /            \\"+c.reset())
-        print(c.red(1)+"   /              V              \\"+c.reset())
-        print(c.red(1)+"  /     ____               ____   \\"+c.reset())
-        print(c.red(1)+" /     /    \\             /    \\   \\"+c.reset())
-        print(c.red(1)+"|     | @  @ |           | @  @ |   |"+c.reset())
-        print(c.red(1)+"|     |  __  |           |  __  |   |"+c.reset())
-        print(c.red(1)+"|      \\    /             \\    /    |"+c.reset())
-        print(c.red(1)+"|       \\  /    _______    \\  /     |"+c.reset())
-        print(c.red(1)+" \\       \\/   /       \\   \\/      /"+c.reset())
-        print(c.red(1)+"  \\      |   |  |||||  |   |      /"+c.reset())
-        print(c.red(1)+"   \\     |   |  |||||  |   |     /"+c.reset())
-        print(c.red(1)+"    \\    |   |_________|   |    /"+c.reset())
-        print(c.red(1)+"     \\___|_______________|___/"+c.reset())
-        print(c.white(0)+"                                                          "+c.reset())
-        print(c.red(1)+"         ╔═╗╔═╗╦  ╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╔═╗╔╦╗"+c.reset())
-        print(c.red(1)+"         ║╣ ║ ║║   ║ ╠═╣  ╚═╗ ║ ╠═╣║   ║ "+c.reset())
-        print(c.red(1)+"         ╚═╝╚═╝╩   ╩ ╩ ╩  ╚═╝ ╩ ╩ ╩╚═╝ ╩ "+c.reset())
-        print(c.white(0)+"                                                          "+c.reset())
-        print(c.red(1)+"       ╔═════════════════════════════════════════════╗"+c.reset())
-        print(c.red(1)+"       ║        [-] HACKER OSINT INTELLIGENCE [-]   ║"+c.reset())
-        print(c.red(1)+"       ║  Author:   darkLabz001                     ║"+c.reset())
-        print(c.red(1)+"       ║  GitHub:   github.com/darkLabz001/darkspy  ║"+c.reset())
-        print(c.red(1)+"       ║  Version:  1.0.0                           ║"+c.reset())
-        print(c.red(1)+"       ║  License:  MIT                             ║"+c.reset())
-        print(c.red(1)+"       ╚═════════════════════════════════════════════╝"+c.reset())
-        print(c.white(0)+"                                                          "+c.reset())
-        print(c.red(1)+"       ╔═════════════════════════════════════════════╗"+c.reset())
-        print(c.red(1)+"       ║        [-] HACKER OSINT INTELLIGENCE [-]   ║"+c.reset())
-        print(c.red(1)+"       ║  Author:   darkLabz001                     ║"+c.reset())
-        print(c.red(1)+"       ║  GitHub:   github.com/darkLabz001/darkspy  ║"+c.reset())
-        print(c.red(1)+"       ║  Version:  1.0.0                           ║"+c.reset())
-        print(c.red(1)+"       ║  License:  MIT                             ║"+c.reset())
-        print(c.red(1)+"       ╚═════════════════════════════════════════════╝"+c.reset())
+        skull = [
+            "                                _,.-----.,_",
+            "                             ,-~           ~-.",
+            "                           ,^___           ___^.",
+            "                          /~\"   ~\"   .   \"~   \"~\\",
+            "                         Y  ,--._    I    _.--.  Y",
+            "                         | Y     ~-. | ,-~     Y |",
+            "                         | |        }:{        | |",
+            "                         j l       / | \\       ! l",
+            "                      .-~  (__,.--\" .^. \"--.,__)  ~-.",
+            "                     (           / / | \\ \\           )",
+            "                      \\.___,   ~  \\/\"\\  ~   .___,/",
+            "                       ^.____                 ____.^",
+            "                          | |T ~\\  !   !  /~ T| |",
+            "                          | |l   _ _ _ _ _   !| |",
+            "                          | l \\/V V V V V V\\/ j |",
+            "                          l  \\ \\|_|_|_|_|_|/ /  !",
+            "                           \\  \\[T T T T T TI/  /",
+            "                            \\  `^-^-^-^-^-^'  /",
+            "                             \\               /",
+            "                              \\./           ,/",
+            '                                "^-.___,-^"',
+        ]
+        for line in skull:
+            print(c.red(1) + line + c.reset())
+        print(c.white(0) + "                                                          " + c.reset())
+        print(c.red(1) + "       ╔═════════════════════════════════════════════╗" + c.reset())
+        print(c.red(1) + "       ║        [-] HACKER OSINT INTELLIGENCE [-]   ║" + c.reset())
+        print(c.red(1) + "       ║  Author:   darkLabz001                     ║" + c.reset())
+        print(c.red(1) + "       ║  GitHub:   github.com/darkLabz001/darkspy  ║" + c.reset())
+        print(c.red(1) + "       ║  Version:  1.0.0                           ║" + c.reset())
+        print(c.red(1) + "       ║  License:  MIT                             ║" + c.reset())
+        print(c.red(1) + "       ╚═════════════════════════════════════════════╝" + c.reset())
+        print(c.white(0) + "                                                          " + c.reset())
         print(c.white(0)+"                                                          "+c.reset())
 
     def tui_menu(self):
