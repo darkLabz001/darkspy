@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 #
-# DarkSpy - Dragon Ball Z Hacker OSINT Suite
+# DarkSpy - Hacker OSINT Intelligence Suite
 # Email & Domain Intelligence Gathering Tool
 #
 # @author:  darkLabz001
@@ -38,11 +38,6 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 SHODAN_KEY = "cvVdlWpSkYZL0YMT0lU1B0wV1SdmeYNJ"
 
-# ╔══════════════════════════════════════════════════════════════╗
-# ║                   DARKSPY - DRAGON BALL Z                   ║
-# ║              HACKER OSINT INTELLIGENCE SUITE                ║
-# ╚══════════════════════════════════════════════════════════════╝
-
 class DarkSpy(object):
     color = color.Colors()
     printf = printer.printer()
@@ -64,33 +59,228 @@ class DarkSpy(object):
         print(c.red(1)+"            ▀█▀ █▀▀ ▀▄▀ █▀▀ █▀ █ █ █▀▀ █▀▀█ █▀▄▀█"+c.reset())
         print(c.red(1)+"             █  ██▄  █  ██▄ ▄█ █▀█ ██▄ █▄▄▀ █ ▀ █"+c.reset())
         print(c.white(0)+"                                                          "+c.reset())
-        print(c.red(1)+"     ╔═══════════════════════════════════════════════╗"+c.reset())
-        print(c.red(1)+"     ║  ███▄ ▄███▓    ▄▄▄█████▓▓█████  ██▀███   ▓█████  ║"+c.reset())
-        print(c.red(1)+"     ║  ▓██▒▀█▀ ██▒   ▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒▒▓█   ▀  ║"+c.reset())
-        print(c.red(1)+"     ║  ▓██    ▓██░   ▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒▒███    ║"+c.reset())
-        print(c.red(1)+"     ║  ▒██    ▒██    ░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  ▒▓█  ▄  ║"+c.reset())
-        print(c.red(1)+"     ║  ▒██▒   ░██▒     ▒██▒ ░ ░▒████▒░██▓ ▒██▒░▒████▒ ║"+c.reset())
-        print(c.red(1)+"     ║  ░ ▒░   ░  ░     ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░░░ ▒░ ░ ║"+c.reset())
-        print(c.red(1)+"     ║   ░  ░      ░       ░     ░ ░  ░  ░▒ ░ ▒░ ░ ░  ░ ║"+c.reset())
-        print(c.red(1)+"     ║      ░      ░     ░         ░     ░░   ░    ░    ║"+c.reset())
-        print(c.red(1)+"     ║                        ░          ░        ░  ░  ║"+c.reset())
-        print(c.red(1)+"     ╚═══════════════════════════════════════════════╝"+c.reset())
-        print(c.white(0)+"                                                          "+c.reset())
-        print(c.red(1)+"     ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔═╗╦═╗╔╦╗  ╔═╗╦  ╦╔═╗╔╗╔╔╦╗╔═╗  ║"+c.reset())
-        print(c.red(1)+"     ╠═╝║ ║║║║║╣   ║  ║ ║╠╦╝ ║║  ║╣ ╚╗╔╝║ ║║║║ ║ ║╣   ║"+c.reset())
-        print(c.red(1)+"     ╩  ╚═╝╩ ╩╚═╝  ╚═╝╚═╝╩╚══╩╝  ╚═╝ ╚╝ ╚═╝╝╚╝ ╩ ╚═╝  ║"+c.reset())
-        print(c.red(1)+"     ╚═══════════════════════════════════════════════╝"+c.reset())
-        print(c.white(0)+"                                                          "+c.reset())
-        print(c.red(1)+"              [-] HACKER OSINT INTELLIGENCE [-]            "+c.reset())
-        print(c.white(0)+"                                                          "+c.reset())
         print(c.red(1)+"       ╔═════════════════════════════════════════════╗"+c.reset())
-        print(c.red(1)+"       ║  Power Level: OVER 9000!                   ║"+c.reset())
-        print(c.red(1)+"       ║  Author:      darkLabz001                  ║"+c.reset())
-        print(c.red(1)+"       ║  GitHub:      github.com/darkLabz001       ║"+c.reset())
-        print(c.red(1)+"       ║  License:     MIT                          ║"+c.reset())
-        print(c.red(1)+"       ║  Version:     1.0.0 - Namek Saga           ║"+c.reset())
+        print(c.red(1)+"       ║        [-] HACKER OSINT INTELLIGENCE [-]   ║"+c.reset())
+        print(c.red(1)+"       ║  Author:   darkLabz001                     ║"+c.reset())
+        print(c.red(1)+"       ║  GitHub:   github.com/darkLabz001/darkspy  ║"+c.reset())
+        print(c.red(1)+"       ║  Version:  1.0.0                           ║"+c.reset())
+        print(c.red(1)+"       ║  License:  MIT                             ║"+c.reset())
         print(c.red(1)+"       ╚═════════════════════════════════════════════╝"+c.reset())
         print(c.white(0)+"                                                          "+c.reset())
+
+    def tui_menu(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║                  SELECT MODE                     ║"+c.reset())
+        print(c.red(1)+"  ╠══════════════════════════════════════════════════╣"+c.reset())
+        print(c.red(1)+"  ║                                                  ║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[1] Domain Reconnaissance                      "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[2] Email Info (Shodan Lookup)                 "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[3] Email SMTP Verify                         "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[4] Social Media Enumeration                  "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[5] Breach / Leak Check                       "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[6] Email Header Analysis (.eml)              "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[7] Subdomain Enumeration                     "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[8] Full Scan (All Sources)                   "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║  "+c.reset()+c.white(0)+"[0] Exit                                      "+c.red(1)+"║"+c.reset())
+        print(c.red(1)+"  ║                                                  ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        choice = input(c.red(1)+"  [?] Select option: "+c.reset())
+        return choice.strip()
+
+    def tui_domain_recon(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║             DOMAIN RECONNAISSANCE                ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        print(c.white(0)+"  Select source:"+c.reset())
+        print(c.white(0)+"    [1] Bing Search"+c.reset())
+        print(c.white(0)+"    [2] DNS / MX / SPF Records"+c.reset())
+        print(c.white(0)+"    [3] PGP Keys"+c.reset())
+        print(c.white(0)+"    [4] Certificate Transparency (crt.sh)"+c.reset())
+        print(c.white(0)+"    [5] GitHub Code Search"+c.reset())
+        print(c.white(0)+"    [6] Hunter.io"+c.reset())
+        print(c.white(0)+"    [7] Subdomain Enumeration"+c.reset())
+        print(c.white(0)+"    [8] ALL Sources"+c.reset())
+        print("")
+        source_choice = input(c.red(1)+"  [?] Select source: "+c.reset())
+        target = input(c.red(1)+"  [?] Enter domain: "+c.reset()).strip()
+        if not target:
+            self.printf.error("No domain entered")
+            return
+        target = self.checkurl(target)
+        self.banner()
+
+        source_map = {
+            '1': 'bing', '2': 'dns', '3': 'pgp', '4': 'crtsh',
+            '5': 'github', '6': 'hunter', '7': 'subs', '8': 'all'
+        }
+        source = source_map.get(source_choice, 'all')
+
+        sources = {
+            'bing': lambda: self.bing(target),
+            'pgp': lambda: self.pgp(target),
+            'crtsh': lambda: self.crtsh(target),
+            'dns': lambda: self.dns(target),
+            'github': lambda: self.github(target),
+            'hunter': lambda: self.hunter(target),
+            'subs': lambda: self.subdomains(target),
+        }
+
+        if source == 'all':
+            self.printf.test("Running all sources for \"%s\"...\n" % target)
+            netcraft.netcraft(target).search()
+            for name, func in sources.items():
+                func()
+        else:
+            netcraft.netcraft(target).search()
+            sources[source]()
+
+        self.info()
+
+    def tui_email_info(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║           EMAIL INFO (SHODAN LOOKUP)             ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        email = input(c.red(1)+"  [?] Enter email: "+c.reset()).strip()
+        if '@' not in email:
+            self.printf.error("Invalid email")
+            return
+        self.banner()
+        self.getinfo(email)
+
+    def tui_smtp_verify(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║              EMAIL SMTP VERIFY                   ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        email = input(c.red(1)+"  [?] Enter email: "+c.reset()).strip()
+        if '@' not in email:
+            self.printf.error("Invalid email")
+            return
+        self.banner()
+        verify = smtp_verify.smtp_verify(email)
+        verify.verify()
+
+    def tui_social_enum(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║         SOCIAL MEDIA ENUMERATION                ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        email = input(c.red(1)+"  [?] Enter email: "+c.reset()).strip()
+        if '@' not in email:
+            self.printf.error("Invalid email")
+            return
+        self.banner()
+        se = social_enum.social_enum(email)
+        se.process()
+
+    def tui_breach_check(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║            BREACH / LEAK CHECK                   ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        email = input(c.red(1)+"  [?] Enter email: "+c.reset()).strip()
+        if '@' not in email:
+            self.printf.error("Invalid email")
+            return
+        self.banner()
+        bc = breach_check.breach_check(email)
+        bc.process()
+
+    def tui_header_analysis(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║           EMAIL HEADER ANALYSIS                  ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        path = input(c.red(1)+"  [?] Path to .eml file: "+c.reset()).strip()
+        if not os.path.exists(path):
+            self.printf.error("File not found: %s" % path)
+            return
+        self.banner()
+        ha = header_analyze.header_analyze(path)
+        ha.analyze()
+
+    def tui_subdomain_enum(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║           SUBDOMAIN ENUMERATION                 ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        target = input(c.red(1)+"  [?] Enter domain: "+c.reset()).strip()
+        if not target:
+            self.printf.error("No domain entered")
+            return
+        target = self.checkurl(target)
+        self.banner()
+        se = subdomain_enum.subdomain_enum(target)
+        se.process()
+
+    def tui_full_scan(self):
+        c = self.color
+        self.banner()
+        print(c.red(1)+"  ╔══════════════════════════════════════════════════╗"+c.reset())
+        print(c.red(1)+"  ║              FULL SCAN (ALL SOURCES)             ║"+c.reset())
+        print(c.red(1)+"  ╚══════════════════════════════════════════════════╝"+c.reset())
+        print("")
+        target = input(c.red(1)+"  [?] Enter domain: "+c.reset()).strip()
+        if not target:
+            self.printf.error("No domain entered")
+            return
+        target = self.checkurl(target)
+        self.banner()
+        self.printf.test("Running all sources for \"%s\"...\n" % target)
+        netcraft.netcraft(target).search()
+        self.bing(target)
+        self.pgp(target)
+        self.crtsh(target)
+        self.dns(target)
+        self.github(target)
+        self.hunter(target)
+        self.info()
+
+    def run_tui(self):
+        while True:
+            choice = self.tui_menu()
+            if choice == '1':
+                self.tui_domain_recon()
+            elif choice == '2':
+                self.tui_email_info()
+            elif choice == '3':
+                self.tui_smtp_verify()
+            elif choice == '4':
+                self.tui_social_enum()
+            elif choice == '5':
+                self.tui_breach_check()
+            elif choice == '6':
+                self.tui_header_analysis()
+            elif choice == '7':
+                self.tui_subdomain_enum()
+            elif choice == '8':
+                self.tui_full_scan()
+            elif choice == '0':
+                print(self.color.red(1)+"\n  [!] Powering down DarkSpy..."+self.color.reset()+"\n")
+                sys.exit(0)
+            else:
+                self.printf.error("Invalid option")
+            print("")
+            input(self.color.red(1)+"  [Press Enter to continue...]"+self.color.reset())
 
     def usage(self):
         name = os.path.basename(sys.argv[0]).split(".")[0]
@@ -113,17 +303,13 @@ class DarkSpy(object):
         print(self.color.white(0)+"  Network:"+self.color.reset())
         print("\t-T --tor\tRoute requests through Tor")
         print("\t-h --help\tShow this help and exit")
+        print(self.color.white(0)+"  TUI:"+self.color.reset())
+        print("\t  --tui\t\tLaunch interactive menu (no args)")
         print("")
         print(self.color.red(1)+"  Examples:"+self.color.reset())
+        print("\t %s --tui" % (name))
         print("\t %s -t site.com -s all" % (name))
-        print("\t %s -t site.com -d" % (name))
         print("\t %s -i user@site.com" % (name))
-        print("\t %s -v user@site.com" % (name))
-        print("\t %s -p user@site.com" % (name))
-        print("\t %s -b user@site.com" % (name))
-        print("\t %s -H email.eml" % (name))
-        print("\t %s -t site.com -s all -o -c" % (name))
-        print(self.color.red(1)+"\n  \"The dragon balls reveal all secrets...\" - DarkSpy"+self.color.reset())
         print("")
 
     def info(self):
@@ -264,11 +450,16 @@ class DarkSpy(object):
             self.printf.error("Domain %s does not exist" % domain)
         except Exception as e:
             self.printf.error("Error: %s" % str(e))
-        sys.exit()
 
     def main(self, kwargs):
         if len(sys.argv) <= 1:
-            self.usage()
+            self.run_tui()
+            return
+
+        if '--tui' in kwargs:
+            self.run_tui()
+            return
+
         try:
             opts, args = getopt.getopt(kwargs, "t:s:i:vh:H:dp:b:oO:cT",
                 ["target=", "source=", "info=", "verify=", "help",
@@ -470,4 +661,5 @@ if __name__ == "__main__":
     try:
         DarkSpy().main(sys.argv[1:])
     except KeyboardInterrupt:
-        sys.exit("\n" + "\033[1;31m" + "  [!] Kamehameha! Interrupted. Powering down..." + "\033[0m")
+        print("\n" + "\033[1;31m" + "  [!] Interrupted. Powering down..." + "\033[0m")
+        sys.exit(0)
